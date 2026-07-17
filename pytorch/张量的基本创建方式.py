@@ -62,7 +62,7 @@ def create_tensor_with_value():
     t4 = torch.zeros(2,3)  #全0张量
     print(f't4: {t4}, type: {type(t4)}')
     print('-------------------')
-    t5 = torch. tensor([[1, 2], [3, 4],[5, 6]])
+    t5 = torch.tensor([[1, 2], [3, 4],[5, 6]])
     t6 = torch.zeros_like(t5)  #参考参数格式创建全0张量
     print(f't6: {t6}, type: {type(t6)}')
     print('-------------------')
