@@ -1,0 +1,30 @@
+import torch
+torch.manual_seed(32)
+t1 = torch.randint(1,10,(2,3))
+t2 = torch.randint(1,10,(4,3))
+print(f't1: {t1},shape:{t1.shape}')
+print(f't2: {t2},shape:{t2.shape}')
+'''
+cat () 不改变维度数，拼接张量。除了拼接的那个维度外，其它维度数必须保持一致。
+stack () 会改变维度数，拼接张量。所有的维度都必须保持一致。
+'''
+t3 = torch.cat([t1,t2],dim=0)
+print(f't3: {t3},shape:{t3.shape}')
+a1 = torch.randint(1,10,(2,3))
+a2 = torch.randint(1,10,(2,5))
+print(f'a1: {a1},shape:{a1.shape}')
+print(f'a2: {a2},shape:{a2.shape}')
+a3 = torch.cat([a1,a2],dim=1)
+print(f'a3: {a3},shape:{a3.shape}')
+c1 = torch.randint(1,10,(2,4))
+c2 = torch.randint(1,10,(2,4))
+c3 = torch.randint(1,10,(2,4))
+c4 = torch.stack([c1,c2,c3],dim=0)
+c5 = torch.stack([c1,c2,c3],dim=1)
+c6 = torch.stack([c1,c2,c3],dim=2)
+print(f'c1: {c1},shape:{c1.shape}')
+print(f'c2: {c2},shape:{c2.shape}')
+print(f'c3: {c3},shape:{c3.shape}')
+print(f'c4: {c4},shape:{c4.shape}')
+print(f'c5: {c5},shape:{c5.shape}')
+print(f'c6: {c6},shape:{c6.shape}')
