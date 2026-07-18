@@ -1,4 +1,4 @@
-#reshape unsqueeze transpace permute view contiguous is_contiguous 
+#reshape unsqueeze transpose permute view contiguous is_contiguous 
 
 import torch
 import random
