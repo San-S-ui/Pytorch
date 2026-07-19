@@ -1,7 +1,7 @@
 '''
 张量和numpy相互转换
-.detach().numpy()方法：张量转numpy 共享内存
-detach()复制张量，返回一个新的张量，和原来的张量共享内存
+.detach().numpy()方法：张量转numpy 不共享内存
+detach()复制张量，返回一个新的张量，和原来的张量不共享内存
 
 .numpy().copy()方法：张量转numpy 不共享内存
 
@@ -39,7 +39,7 @@ def demo():
     t1 = torch.tensor(100)
     a = t1.item()
     print(t1,type(t1))
-    print(value,type(a))
+    print(a,type(a))
 if __name__=='__main__':
     # tensor_numpy()
     # tensor_numpy1()

@@ -10,5 +10,7 @@
     "editor.mouseWheelZoom": true, //鼠标滚轮缩放
     "cSpell.words": [
         "randn"
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
 }
