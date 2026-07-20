@@ -67,8 +67,20 @@ def train(x, y, coef):
         print(f"轮数：{epoch+1}平均损失值：{total_loss/sample_total}")
     print(f"{epochs}轮的平均损失是{loss_list}")
     print(f"模型权重：{model.weight}，偏置{model.bias}")
-             
-            
+    #绘制损失曲线
+    print(y_pred)
+    plt.plot(range(epochs),loss_list)
+    plt.title('损失值变化')
+    plt.grid()#添加网格线
+    plt.show()
+    #绘制拟合图
+    plt.scatter(x,y)
+    y_pred = torch.tensor(data=[v*model.weight+model.bias for v in x])
+    y_true = torch.tensor(data=[v*coef+14.5 for v in x])
+    plt.plot(x,y_pred,color='red',label='预测值')
+    plt.plot(x,y_true,color='green',label='真实值')
+    plt.legend()
+    plt.show()
 #程序入口
 if __name__ == '__main__':
      x, y, coef = create_datasets()
