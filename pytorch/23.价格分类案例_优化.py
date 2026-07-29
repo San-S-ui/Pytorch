@@ -123,10 +123,10 @@ def evaluate(valid_dataset, input_dim, class_num):
 		# 获取预测正确的个数
 		correct += (y_pred == y).sum()
 	# 求预测精度
-	print('Acc: %.5f' % (correct / len(valid_dataset)))
+	print('Acc: %.2f' % (correct / len(valid_dataset)))
 
 
 if __name__ == '__main__':
 	train_dataset, valid_dataset, input_dim, class_num = create_dataset()
-	train(train_dataset, input_dim, class_num)
+	# train(train_dataset, input_dim, class_num)
 	evaluate(valid_dataset, input_dim, class_num)
