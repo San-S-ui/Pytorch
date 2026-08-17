@@ -195,7 +195,3 @@ if prompt:
     st.session_state.messages.append({"role": "assistant", "content": full_response,"avatar":"./resources/ai.png"})
     # 保存当前会话
     save_session()
-
-
-
-
