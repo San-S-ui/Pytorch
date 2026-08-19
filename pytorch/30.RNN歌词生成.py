@@ -202,7 +202,7 @@ if __name__=='__main__':
     # print(f'输入值: {x}')  
     # print(f'目标值: {y}')  
 
-    train()
+    # train()
 
      # 测试模型.
-    # evaluate('星星', 50)
+    evaluate('我', 50)

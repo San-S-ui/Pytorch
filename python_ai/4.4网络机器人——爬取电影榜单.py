@@ -3,7 +3,7 @@ import csv
 from lxml import html
 import re
 #路径
-CSV_FILE = r'D:\pytorch\python_ai\resources\movie_list.csv'
+CSV_FILE = r'D:\pytorch\jupyter\data\movies.csv'
 BASE_URL = "https://www.themoviedb.org/"
 Top_URL_1 = "https://www.themoviedb.org/movie/top-rated"#默认只访问第一页
 Top_URL_2 = "https://www.themoviedb.org/discover/movie/items"
@@ -85,7 +85,7 @@ def save_all_movie(all_movies):
 
 def main():
     all_movies = []
-    for page in range(1,6):
+    for page in range(1,16):
         # 1. 发送请求,获取数据
         if page==1:
             response = requests.get(Top_URL_1,timeout=60)
